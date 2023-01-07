@@ -1,21 +1,17 @@
 .companydetails {
-  padding: 0 5rem;
-  // background: rgba(0, 0, 0, 0.05);
+  background: linear-gradient(to right, rgb(14, 12, 12), rgb(31, 31, 31));
   h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 0rem;
+    margin-bottom: 5rem;
+    padding-top: 5rem;
     text-transform: uppercase;
-    // background: linear-gradient(to right, #ff0000, #e98227, #ff7700, #e20606);
     background: #ff7700;
+    background: linear-gradient(to right, #ff0000, #e98227, #ff7700, #e20606);
     background-clip: text;
     color: transparent;
     letter-spacing: 0.1rem;
-    // text-decoration: underline 0.5rem double;
-    line-height: 3rem;
-    // text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.1);
-    margin-top: 6rem;
-    // margin-bottom: 5rem;
 
     &:hover {
       transform: skew(15deg, 1deg);
@@ -24,19 +20,22 @@
 }
 
 .about-company__card {
-  background: rgba(255, 255, 255, 0.8);
-  // padding: 2rem 3rem;
-  margin-top: 3rem;
-  // display: flex;
+  background: rgba(255, 255, 255, 1);
   position: relative;
   transition: 0.6s linear;
+  width: 20rem;
+  height: 35rem;
+  border: solid black 0.1rem;
+  padding: 1rem;
+  border-radius: 0.2rem;
+
   .card_pic {
     img {
-      width: 60%;
-      height: 25rem;
+      width: 100%;
+      height: 14rem;
       // border: solid 0.8rem rgba(236, 127, 31, 0.1);
       // border-radius: 0.5rem;
-      transition: 0.3 linear;
+      // transition: 0.3 linear;
 
       &:hover {
         cursor: pointer;
@@ -45,23 +44,13 @@
   }
 
   .card_write {
-    position: absolute;
-    top: 50%;
-    background: rgba(255, 251, 251, 0.8);
-    border-right: 1rem solid rgba(0, 0, 0, 1);
-    border-bottom: #000000 0.1rem solid;
-    border-top: #000000 0.3rem solid;
-    padding: 1rem;
-    // border-bottom-right-radius: 5rem;
-    width: 60%;
-    right: 0;
-    transform: translate(-10%, -50%);
-    // border: #000000 0.1rem solid;
+    background: rgba(255, 251, 251, 1);
+    width: 100%;
     h4 {
       color: transparent;
       background: linear-gradient(to right, #ff0000, #e98227, #ff7700, #e20606);
       background-clip: text;
-      font-size: 2rem;
+      font-size: 1.3rem;
       margin-bottom: 0;
       text-transform: uppercase;
 
@@ -72,7 +61,7 @@
 
     p {
       color: #000000;
-      font-size: 1.6rem;
+      font-size: 1rem;
       // font-weight: 700;
       margin-top: 0.5rem;
       font-family: "Staatliches", cursive;
@@ -80,14 +69,17 @@
   }
 
   &:hover {
-    transform: translateY(-0.5rem);
+    transform: translateY(-1rem);
   }
 }
 
 .about-company {
-  // background: rgba(255, 252, 252, 0.7);
-
   padding: 0.01rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 @media (max-width: 950px) {

@@ -28,15 +28,25 @@ function Navbar() {
           <Closeicon>
             <CloseIcon className={"icon"} fontSize="large" onClick={closeNav} />
           </Closeicon>
-          <Link to="/" onClick={closeNav}>
-            Home
-          </Link>
-          <Link to={"/villa"} onClick={closeNav}>
-            Villa
-          </Link>
-          <Link to="/about">About</Link>
-          <a href="./">Family</a>
-          <a href="./">Contact</a>
+          <NavGroup>
+            <NavSub>
+              <a href="./">Kitchen Wares</a>
+              <a href="./">Luxury Beds</a>
+              <a href="./">Glass ware</a>
+              <a href="./">Lamps</a>
+            </NavSub>
+            <NavMain>
+              <Link to="/" onClick={closeNav}>
+                Home
+              </Link>
+              <Link to={"/villa"} onClick={closeNav}>
+                Villa
+              </Link>
+              <Link to="/about">About</Link>
+              <a href="./">Family</a>
+              <a href="./">Contact</a>
+            </NavMain>
+          </NavGroup>
         </Navelements>
         <div className="navicon">
           <MenuIcon fontSize="large" onClick={openNav} />
@@ -48,7 +58,7 @@ function Navbar() {
 }
 
 const Container = styled.div`
-  /* background: rgba(0, 0, 0, 0.1); */
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,7 +73,7 @@ const Container = styled.div`
 
 const Logo = styled.div`
   img {
-    width: 4rem;
+    width: 2rem;
     background: rgba(255, 255, 255, 0.3);
     border: none;
   }
@@ -71,14 +81,13 @@ const Logo = styled.div`
 
 const Navelements = styled.div`
   a {
-    color: #ff7700;
+    color: #fff8f2;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.6rem;
-    /* margin-left: 0.3rem; */
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
     position: relative;
     font-family: "Staatliches", cursive;
-    /* background: rgba(0, 0, 0, 0.2); */
     border-radius: 0.4rem;
     padding: 0.5rem 0.3rem;
     position: relative;
@@ -119,7 +128,7 @@ const Navelements = styled.div`
     width: 50%;
     height: 100%;
     right: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 99;
     transform: ${(props) => (props.show ? "translateX(100%)" : "translate(0)")};
 
@@ -144,6 +153,30 @@ const Closeicon = styled.div`
   top:1.3rem;
   left:1.3rem;
   cursor:pointer;
+`;
+
+const NavGroup = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+  }
+`;
+const NavMain = styled.div`
+  @media (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+const NavSub = styled.div`
+  margin-right: 13rem;
+
+  @media (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export default Navbar;
